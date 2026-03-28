@@ -137,7 +137,7 @@ const OptIn = () => {
                   className="font-heading text-4xl md:text-5xl xl:text-6xl leading-[1.05] !text-primary-foreground font-bold mb-5"
                 >
                   Never Miss
-                  <span className="block italic text-accent mt-1 text-5xl md:text-6xl xl:text-7xl drop-shadow-[0_0_25px_hsl(var(--accent)/0.5)]">An <span className="relative inline-block px-3 py-1 border-2 border-accent shadow-[0_0_20px_hsl(var(--accent)/0.3),inset_0_0_20px_hsl(var(--accent)/0.05)]">Update</span></span>
+                  <span className="block italic mt-1 text-5xl md:text-6xl xl:text-7xl">An <span className="relative inline-block bg-accent text-accent-foreground px-4 py-1 -skew-x-3 shadow-[0_0_30px_hsl(var(--accent)/0.4)]">Update</span></span>
                 </motion.h1>
 
                 <motion.p
