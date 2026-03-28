@@ -6,11 +6,11 @@ import logo from "@/assets/logo-uplift.webp";
 import kennyPhoto from "@/assets/kenny-goolsby.png";
 
 const benefits = [
-  "Personalized hormone optimization plan",
-  "Access to board-certified specialists",
-  "Concierge-level care at every visit",
-  "Lab work coordination & monitoring",
-  "Ongoing support between appointments",
+  "Appointment reminders sent straight to your phone",
+  "Exclusive promotions & member-only offers",
+  "Health tips and wellness updates",
+  "New service announcements before anyone else",
+  "Easy two-way texting with our care team",
 ];
 
 const pillars = [
@@ -99,9 +99,9 @@ const OptIn = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15 }}
-                  className="text-[10px] tracking-[6px] uppercase font-body text-accent font-semibold mb-5"
+                   className="text-[10px] tracking-[6px] uppercase font-body text-accent font-semibold mb-5"
                 >
-                  Hormone Replacement Therapy
+                  Stay In The Loop
                 </motion.p>
 
                 <motion.h1
@@ -110,8 +110,8 @@ const OptIn = () => {
                   transition={{ delay: 0.25 }}
                   className="font-heading text-4xl md:text-5xl xl:text-6xl leading-[1.05] !text-primary-foreground font-bold mb-5"
                 >
-                  Reclaim Your
-                  <span className="block italic text-accent mt-1">Vitality</span>
+                  Never Miss
+                  <span className="block italic text-accent mt-1">An Update</span>
                 </motion.h1>
 
                 <motion.p
@@ -120,7 +120,7 @@ const OptIn = () => {
                   transition={{ delay: 0.35 }}
                   className="font-body text-primary-foreground/60 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
                 >
-                  Mississippi's premier concierge clinic. Personalized treatment to transform your energy, focus, and quality of life.
+                  Opt in to receive appointment reminders, exclusive offers, and wellness updates directly to your phone from Uplift Medical.
                 </motion.p>
 
                 <motion.ul
@@ -153,7 +153,7 @@ const OptIn = () => {
                   transition={{ delay: 0.8 }}
                   className="lg:hidden inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3.5 hover:bg-gold-light transition-colors"
                 >
-                  Get Started <ArrowRight size={15} />
+                  Opt In Now <ArrowRight size={15} />
                 </motion.a>
               </div>
             </div>
