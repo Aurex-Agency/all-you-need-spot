@@ -49,7 +49,7 @@ const OptIn = () => {
       </div>
 
       {/* ── HERO: Full-bleed immersive section ── */}
-      <section className="relative min-h-screen flex items-center pt-12">
+      <section className="relative min-h-screen lg:min-h-0 lg:h-screen flex items-center pt-12">
         {/* Background gradient sweep */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-light" />
         {/* Subtle radial glow */}
@@ -169,7 +169,7 @@ const OptIn = () => {
                 {/* Glow behind card */}
                 <div className="absolute -inset-8 bg-accent/[0.06] blur-3xl rounded-full" />
 
-                <div className="relative bg-background/[0.97] backdrop-blur-xl p-8 md:p-10 shadow-[0_30px_80px_-20px_hsl(var(--navy)/0.5)] border border-border/50">
+                <div className="relative bg-background/[0.97] backdrop-blur-xl p-6 md:p-8 shadow-[0_30px_80px_-20px_hsl(var(--navy)/0.5)] border border-border/50">
                   {/* Top accent bar */}
                   <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
@@ -182,11 +182,11 @@ const OptIn = () => {
                       <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-primary mb-2 leading-tight">
                         Stay Connected
                       </h2>
-                      <p className="font-body text-sm text-muted-foreground mb-7 leading-relaxed">
+                      <p className="font-body text-sm text-muted-foreground mb-5 leading-relaxed">
                         Opt in to receive important updates, appointment reminders, and exclusive offers from Uplift Medical.
                       </p>
 
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                      <form onSubmit={handleSubmit} className="space-y-3">
                         <div className="group">
                           <label className="block font-body text-[10px] tracking-[3px] uppercase text-foreground/50 mb-1.5 group-focus-within:text-accent transition-colors">
                             Full Name
@@ -196,7 +196,7 @@ const OptIn = () => {
                             required
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="w-full h-12 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors"
+                            className="w-full h-10 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors"
                             placeholder="John Doe"
                           />
                         </div>
@@ -209,7 +209,7 @@ const OptIn = () => {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full h-12 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors"
+                            className="w-full h-10 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors"
                             placeholder="john@email.com"
                           />
                         </div>
@@ -222,7 +222,7 @@ const OptIn = () => {
                             required
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="w-full h-12 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors"
+                            className="w-full h-10 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors"
                             placeholder="(662) 000-0000"
                           />
                         </div>
@@ -236,7 +236,7 @@ const OptIn = () => {
                             required
                             value={clientType}
                             onChange={(e) => setClientType(e.target.value)}
-                            className="w-full h-12 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer text-foreground"
+                            className="w-full h-10 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer text-foreground"
                           >
                             <option value="" disabled className="text-muted-foreground">Select one...</option>
                             <option value="new" className="text-foreground bg-background">New Client</option>
@@ -275,7 +275,7 @@ const OptIn = () => {
 
                         <button
                           type="submit"
-                          className="w-full h-14 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-4 group"
+                          className="w-full h-12 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-3 group"
                         >
                           Opt In Now
                           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
