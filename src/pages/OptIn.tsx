@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Shield, Clock, Zap, Phone } from "lucide-react";
 import heroHome from "@/assets/hero-home.jpg";
+import logo from "@/assets/logo-uplift.webp";
 
 const benefits = [
   "Personalized hormone optimization plan",
