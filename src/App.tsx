@@ -14,6 +14,7 @@ import TRTWomen from "./pages/TRTWomen";
 import ProgesteroneEstrogen from "./pages/ProgesteroneEstrogen";
 import FitnessWeightLoss from "./pages/FitnessWeightLoss";
 import PeptideTherapy from "./pages/PeptideTherapy";
+import OptIn from "./pages/OptIn";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
