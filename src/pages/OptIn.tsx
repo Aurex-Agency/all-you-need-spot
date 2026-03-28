@@ -28,10 +28,33 @@ const OptIn = () => {
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!smsConsent || !marketingConsent) return;
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      await fetch("https://services.leadconnectorhq.com/hooks/TeOpti4qe6jxiicUI2Sy/webhook-trigger/a288e479-e21c-4d52-a95a-128f09e375bb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          clientType,
+          smsConsent,
+          marketingConsent,
+        }),
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Webhook submission failed:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
