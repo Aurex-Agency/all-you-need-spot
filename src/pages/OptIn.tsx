@@ -37,10 +37,9 @@ const OptIn = () => {
     setIsSubmitting(true);
 
     try {
-      await fetch("https://services.leadconnectorhq.com/hooks/TeOpti4qe6jxiicUI2Sy/webhook-trigger/a288e479-e21c-4d52-a95a-128f09e375bb", {
+      const response = await fetch("/api/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        mode: "no-cors",
         body: JSON.stringify({
           firstName: name.split(" ")[0] || "",
           lastName: name.split(" ").slice(1).join(" ") || "",
