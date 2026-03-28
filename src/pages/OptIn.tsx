@@ -460,7 +460,7 @@ const OptIn = () => {
             </p>
             <a
               href="#optin-form"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase px-12 py-4 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 group"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-heading text-sm font-semibold tracking-[3px] uppercase px-12 py-4 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 group"
             >
               Opt In Now
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
