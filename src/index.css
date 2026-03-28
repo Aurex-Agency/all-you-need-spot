@@ -54,6 +54,16 @@
     --shadow-dramatic: 0 25px 60px hsl(220 46% 20% / 0.15);
     --shadow-gold: 0 8px 30px hsl(38 45% 58% / 0.25);
   }
+
+  /* Silver/grey accent override for opt-in page */
+  .optin-silver {
+    --accent: 220 10% 58%;
+    --accent-foreground: 0 0% 100%;
+    --gold: 220 10% 58%;
+    --gold-light: 220 10% 68%;
+    --ring: 220 10% 58%;
+    --shadow-gold: 0 8px 30px hsl(220 10% 58% / 0.25);
+  }
 }
 
 @layer base {
