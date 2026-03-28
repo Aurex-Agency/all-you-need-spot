@@ -42,6 +42,7 @@ const App = () => (
           <Route path="/progesteroneestrogen" element={<ProgesteroneEstrogen />} />
           <Route path="/fitnessdietaryweightloss" element={<FitnessWeightLoss />} />
           <Route path="/peptidetherapy" element={<PeptideTherapy />} />
+          <Route path="/optin" element={<OptIn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
