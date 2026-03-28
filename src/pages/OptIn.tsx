@@ -50,6 +50,7 @@ const OptIn = () => {
           marketingConsent,
         }),
       });
+      if (!response.ok) throw new Error("Submission failed");
       setSubmitted(true);
     } catch (error) {
       console.error("Webhook submission failed:", error);
