@@ -5,8 +5,6 @@ import { Check, ArrowRight, Shield, Clock, Zap, Phone, Star, MapPin } from "luci
 import { toast } from "sonner";
 import logo from "@/assets/logo-uplift.webp";
 import kennyPhoto from "@/assets/kenny-goolsby.png";
-import logo from "@/assets/logo-uplift.webp";
-import kennyPhoto from "@/assets/kenny-goolsby.png";
 
 const benefits = [
   "Appointment reminders sent straight to your phone",
