@@ -65,9 +65,9 @@ const OptIn = () => {
       {/* Minimal top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-accent py-2.5 px-4 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center">
+          <div className="flex items-center">
             <img src={logo} alt="Uplift Medical" className="h-8 w-auto" />
-          </Link>
+          </div>
           <a href="tel:6624911467" className="text-accent-foreground/90 text-xs font-body flex items-center gap-1.5 hover:text-primary transition-colors">
             <Phone size={12} /> 662-491-1467
           </a>
