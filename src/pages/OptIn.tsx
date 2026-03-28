@@ -61,7 +61,7 @@ const OptIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <div className="min-h-screen bg-background overflow-hidden optin-silver">
       {/* Minimal top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-accent py-2.5 px-4 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
