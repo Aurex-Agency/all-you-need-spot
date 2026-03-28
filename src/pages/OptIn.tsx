@@ -177,7 +177,7 @@ const OptIn = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
-                  className="lg:hidden inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-base font-bold tracking-[3px] uppercase px-10 py-4 hover:bg-gold-light transition-colors animate-glow-pulse shadow-[0_0_20px_hsl(var(--accent)/0.4)]"
+                  className="lg:hidden inline-flex items-center gap-2 bg-accent text-accent-foreground font-heading text-base font-bold tracking-[3px] uppercase px-10 py-4 hover:bg-gold-light transition-colors animate-glow-pulse shadow-[0_0_20px_hsl(var(--accent)/0.4)]"
                 >
                   Opt In Now <ArrowRight size={15} />
                 </motion.a>
