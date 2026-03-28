@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight, Shield, Clock, Zap, Phone } from "lucide-react";
 import heroHome from "@/assets/hero-home.jpg";
 import logo from "@/assets/logo-uplift.webp";
+import optinBg from "@/assets/optin-bg.svg";
 
 const benefits = [
   "Personalized hormone optimization plan",
