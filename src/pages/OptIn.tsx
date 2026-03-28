@@ -302,7 +302,7 @@ const OptIn = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full h-12 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-3 group disabled:opacity-60 disabled:cursor-not-allowed"
+                          className="w-full h-12 bg-accent text-accent-foreground font-heading text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-3 group disabled:opacity-60 disabled:cursor-not-allowed"
                         >
                           {isSubmitting ? "Submitting..." : "Opt In Now"}
                           {!isSubmitting && <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />}
