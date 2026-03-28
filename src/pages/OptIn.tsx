@@ -114,9 +114,8 @@ const OptIn = () => {
 
           {/* Right — image + form overlay */}
           <div className="relative min-h-[600px] lg:min-h-screen">
-            <div className="absolute inset-0">
-              <img src={heroHome} alt="Wellness" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-primary/60" />
+            <div className="absolute inset-0 bg-primary">
+              <img src={optinBg} alt="" className="w-full h-full object-contain opacity-20" />
             </div>
 
             {/* Form card */}
