@@ -28,10 +28,33 @@ const OptIn = () => {
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!smsConsent || !marketingConsent) return;
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      await fetch("https://services.leadconnectorhq.com/hooks/TeOpti4qe6jxiicUI2Sy/webhook-trigger/a288e479-e21c-4d52-a95a-128f09e375bb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          clientType,
+          smsConsent,
+          marketingConsent,
+        }),
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Webhook submission failed:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -275,10 +298,11 @@ const OptIn = () => {
 
                         <button
                           type="submit"
-                          className="w-full h-12 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-3 group"
+                          disabled={isSubmitting}
+                          className="w-full h-12 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-3 group disabled:opacity-60 disabled:cursor-not-allowed"
                         >
-                          Opt In Now
-                          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                          {isSubmitting ? "Submitting..." : "Opt In Now"}
+                          {!isSubmitting && <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />}
                         </button>
 
                         <p className="text-[10px] text-muted-foreground text-center font-body mt-3 flex items-center justify-center gap-1.5">
