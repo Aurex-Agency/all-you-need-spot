@@ -1,5 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const faqs = [
   { q: "What services does Uplift Medical offer?", a: "We offer a comprehensive range of wellness services including hormone replacement therapy (for both men and women), IV therapy, peptide therapy, progesterone & estrogen therapy, and fitness/dietary/weight loss consultations. All services are personalized to your unique health needs." },
@@ -13,26 +14,42 @@ const faqs = [
 
 const FAQSection = () => (
   <section className="section-padding">
-    <div className="container-wide max-w-3xl">
-      <ScrollReveal>
-        <p className="section-label text-center mb-3">FAQ</p>
-        <h2 className="font-heading text-3xl md:text-4xl text-center mb-12">Frequently Asked Questions</h2>
-      </ScrollReveal>
+    <div className="container-wide">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16">
+        {/* Left column - sticky header */}
+        <ScrollReveal>
+          <div className="lg:sticky lg:top-32">
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-12 h-px bg-gold/40" />
+              <p className="section-label">FAQ</p>
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl mb-4">Frequently Asked Questions</h2>
+            <p className="font-body text-muted-foreground text-sm leading-relaxed mb-6">
+              Can't find what you're looking for? We're here to help.
+            </p>
+            <Link to="/contact" className="btn-primary text-xs py-2.5 px-6">Ask Us Directly</Link>
+          </div>
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border border-border px-6 data-[state=open]:border-gold/30">
-              <AccordionTrigger className="font-body text-sm md:text-base text-left py-5 hover:text-gold hover:no-underline">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="font-body text-sm text-muted-foreground leading-relaxed pb-5">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </ScrollReveal>
+        {/* Right column - accordion */}
+        <ScrollReveal delay={0.1}>
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border border-border px-6 hover:border-gold/30 transition-colors data-[state=open]:border-gold/30 data-[state=open]:bg-warm-gray/50">
+                <AccordionTrigger className="font-body text-sm md:text-base text-left py-5 hover:text-gold hover:no-underline">
+                  <span className="flex items-center gap-4">
+                    <span className="text-[11px] text-gold/40 font-body tracking-widest">{String(i + 1).padStart(2, "0")}</span>
+                    {faq.q}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="font-body text-sm text-muted-foreground leading-relaxed pb-5 pl-10">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </ScrollReveal>
+      </div>
     </div>
   </section>
 );
