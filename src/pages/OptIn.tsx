@@ -177,13 +177,13 @@ const OptIn = () => {
                     <>
                       <div className="flex items-center gap-2 mb-6">
                         <div className="w-8 h-[2px] bg-accent" />
-                        <p className="font-body text-[10px] tracking-[4px] uppercase text-accent font-semibold">Free Consultation</p>
+                        <p className="font-body text-[10px] tracking-[4px] uppercase text-accent font-semibold">SMS Opt-In</p>
                       </div>
                       <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-primary mb-2 leading-tight">
-                        Start Your Journey
+                        Stay Connected
                       </h2>
                       <p className="font-body text-sm text-muted-foreground mb-7 leading-relaxed">
-                        No obligation. Completely confidential. Your path to better health starts here.
+                        Opt in to receive important updates, appointment reminders, and exclusive offers from Uplift Medical.
                       </p>
 
                       <form onSubmit={handleSubmit} className="space-y-4">
@@ -227,11 +227,57 @@ const OptIn = () => {
                           />
                         </div>
 
+                        {/* Client Type Dropdown */}
+                        <div className="group">
+                          <label className="block font-body text-[10px] tracking-[3px] uppercase text-foreground/50 mb-1.5 group-focus-within:text-accent transition-colors">
+                            Client Type
+                          </label>
+                          <select
+                            required
+                            value={clientType}
+                            onChange={(e) => setClientType(e.target.value)}
+                            className="w-full h-12 border-b-2 border-border bg-transparent px-0 font-body text-sm focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer text-foreground"
+                          >
+                            <option value="" disabled className="text-muted-foreground">Select one...</option>
+                            <option value="new" className="text-foreground bg-background">New Client</option>
+                            <option value="existing" className="text-foreground bg-background">Existing Client</option>
+                          </select>
+                        </div>
+
+                        {/* SMS Consent Checkboxes */}
+                        <div className="space-y-3 pt-2">
+                          <label className="flex items-start gap-3 cursor-pointer group/check">
+                            <input
+                              type="checkbox"
+                              required
+                              checked={smsConsent}
+                              onChange={(e) => setSmsConsent(e.target.checked)}
+                              className="mt-1 h-4 w-4 rounded border-border accent-accent flex-shrink-0 cursor-pointer"
+                            />
+                            <span className="font-body text-xs text-muted-foreground leading-relaxed group-hover/check:text-foreground/70 transition-colors">
+                              I agree to receive non-marketing SMS messages from Uplift Medical, including appointment reminders and service updates. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help.
+                            </span>
+                          </label>
+
+                          <label className="flex items-start gap-3 cursor-pointer group/check">
+                            <input
+                              type="checkbox"
+                              required
+                              checked={marketingConsent}
+                              onChange={(e) => setMarketingConsent(e.target.checked)}
+                              className="mt-1 h-4 w-4 rounded border-border accent-accent flex-shrink-0 cursor-pointer"
+                            />
+                            <span className="font-body text-xs text-muted-foreground leading-relaxed group-hover/check:text-foreground/70 transition-colors">
+                              I agree to receive marketing and promotional SMS messages from Uplift Medical, including special offers and updates. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help.
+                            </span>
+                          </label>
+                        </div>
+
                         <button
                           type="submit"
                           className="w-full h-14 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-4 group"
                         >
-                          Request Consultation
+                          Opt In Now
                           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </button>
 
