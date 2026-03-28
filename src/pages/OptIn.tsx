@@ -137,7 +137,7 @@ const OptIn = () => {
                   className="font-heading text-4xl md:text-5xl xl:text-6xl leading-[1.05] !text-primary-foreground font-bold mb-5"
                 >
                   Never Miss
-                  <span className="block italic text-accent mt-1">An Update</span>
+                  <span className="block italic text-accent mt-1 text-5xl md:text-6xl xl:text-7xl drop-shadow-[0_0_25px_hsl(var(--accent)/0.5)]">An Update</span>
                 </motion.h1>
 
                 <motion.p
@@ -177,7 +177,7 @@ const OptIn = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
-                  className="lg:hidden inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3.5 hover:bg-gold-light transition-colors"
+                  className="lg:hidden inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3.5 hover:bg-gold-light transition-colors animate-glow-pulse shadow-[0_0_20px_hsl(var(--accent)/0.4)]"
                 >
                   Opt In Now <ArrowRight size={15} />
                 </motion.a>
@@ -302,7 +302,7 @@ const OptIn = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full h-12 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 mt-3 group disabled:opacity-60 disabled:cursor-not-allowed"
+                          className="w-full h-12 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase flex items-center justify-center gap-2 hover:bg-gold-light transition-all duration-300 mt-3 group disabled:opacity-60 disabled:cursor-not-allowed animate-glow-pulse shadow-[0_0_20px_hsl(var(--accent)/0.4)]"
                         >
                           {isSubmitting ? "Submitting..." : "Opt In Now"}
                           {!isSubmitting && <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />}
