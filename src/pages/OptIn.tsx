@@ -68,7 +68,7 @@ const OptIn = () => {
           <div className="flex items-center">
             <img src={logo} alt="Uplift Medical" className="h-8 w-auto" />
           </div>
-          <a href="tel:6624911467" className="text-accent-foreground text-xs font-heading font-semibold tracking-wide flex items-center gap-1.5 border border-accent-foreground/30 px-3 py-1.5 hover:bg-accent-foreground/10 transition-colors">
+          <a href="tel:6624911467" className="text-primary-foreground text-xs font-heading font-semibold tracking-wide flex items-center gap-1.5 bg-primary px-3 py-1.5 hover:bg-navy-light transition-colors">
             <Phone size={12} /> 662-491-1467
           </a>
         </div>
