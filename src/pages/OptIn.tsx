@@ -300,14 +300,24 @@ const OptIn = () => {
                         Thank You, {name.split(" ")[0]}!
                       </h2>
                       <p className="font-body text-muted-foreground text-sm leading-relaxed mb-6">
-                        Our team will reach out within 24 hours to schedule your free consultation.
+                        You're all set! You'll now receive updates, reminders, and exclusive offers from Uplift Medical.
                       </p>
-                      <a
-                        href="tel:6624911467"
-                        className="inline-flex items-center gap-2 text-accent font-body text-sm font-semibold hover:text-gold-light transition-colors"
-                      >
-                        <Phone size={14} /> Or call us now: 662-491-1467
-                      </a>
+                      <div className="flex flex-col items-center gap-3">
+                        <a
+                          href="https://www.facebook.com/p/Uplift-Medical-61558283480368/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[2px] uppercase px-8 py-3 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300"
+                        >
+                          Follow Us on Facebook
+                        </a>
+                        <a
+                          href="tel:6624911467"
+                          className="inline-flex items-center gap-2 text-accent font-body text-sm font-semibold hover:text-gold-light transition-colors"
+                        >
+                          <Phone size={14} /> Or call us: 662-491-1467
+                        </a>
+                      </div>
                     </motion.div>
                   )}
                 </div>
