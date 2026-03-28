@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Shield, Clock, Zap, Phone, Star, MapPin } from "lucide-react";
+import { toast } from "sonner";
 import logo from "@/assets/logo-uplift.webp";
 import kennyPhoto from "@/assets/kenny-goolsby.png";
 
@@ -41,7 +42,8 @@ const OptIn = () => {
         headers: { "Content-Type": "application/json" },
         mode: "no-cors",
         body: JSON.stringify({
-          name,
+          firstName: name.split(" ")[0] || "",
+          lastName: name.split(" ").slice(1).join(" ") || "",
           email,
           phone,
           clientType,
@@ -52,6 +54,7 @@ const OptIn = () => {
       setSubmitted(true);
     } catch (error) {
       console.error("Webhook submission failed:", error);
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
