@@ -413,19 +413,19 @@ const OptIn = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-[10px] tracking-[6px] uppercase font-body text-accent font-semibold mb-4">Take The First Step</p>
+            <p className="text-[10px] tracking-[6px] uppercase font-body text-accent font-semibold mb-4">Don't Miss Out</p>
             <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold mb-4 leading-tight">
-              Ready to Feel Like
-              <span className="italic text-accent"> Yourself</span> Again?
+              Stay Connected With
+              <span className="italic text-accent"> Uplift Medical</span>
             </h2>
             <p className="font-body text-muted-foreground mb-10 max-w-md mx-auto">
-              Renewed energy, sharper focus, and a better quality of life are closer than you think.
+              Get appointment reminders, exclusive offers, and wellness tips delivered right to your phone.
             </p>
             <a
               href="#optin-form"
               className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-sm font-semibold tracking-[3px] uppercase px-12 py-4 hover:bg-gold-light hover:shadow-[var(--shadow-gold)] transition-all duration-300 group"
             >
-              Claim Your Free Consultation
+              Opt In Now
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
